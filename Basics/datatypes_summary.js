@@ -12,7 +12,7 @@
 const id = Symbol('123');
 const anotherid = Symbol('123')
 
-console.log(id === anotherid);
+// console.log(id === anotherid);
 
 // const BigNumber = 333333333333n; -> n repersent BigInt
 
@@ -40,4 +40,27 @@ let myobj = {
 
 // All the Non primitive datatype -> Having the object type of  
 
-console.log(typeof anotherid );
+// console.log(typeof anotherid );
+
+// **********************************************************************
+
+// stack -> Primitive type of data -> change in Copy
+// Heap -> Non Primitive type of data -> change in orignal
+let mygoal = "Rahul Poddar";
+let anotherName = mygoal;
+// anotherName = 'chai or code'; // copy
+console.log(anotherName);
+console.log(mygoal)
+
+let userOne = {
+    email : " user@google.com",
+    upi :"user@ybl",
+}
+let userTwo = userOne
+// userOne passes the same reference of the element -> that's why it is
+// not changing the element
+userTwo.email = "rahulPoddar.com";
+console.log(userOne.email);
+console.log(userTwo.email);
+
+// string concept -> 
