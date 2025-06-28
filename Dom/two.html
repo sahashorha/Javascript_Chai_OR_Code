@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguge(langName){
+        const li =document.createElement('li')
+        li.innerHTML= `${langName}`
+        document.querySelector('.language').
+        appendChild(li)
+    }
+    addLanguge("java")
+    function addOptLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptLanguage('Python')
+    const seconLand = document.querySelector("li:nth-child(2)")
+    const newlI = document.createElement('li')
+    newlI.textContent = "ReactJs"
+    seconLand.replaceWith(newlI);
+
+// edit
+const firstland = document.querySelector('li:first-child');
+const newfirst = document.createElement('li');
+newfirst.textContent ="typeScript";
+firstland.replaceWith(newfirst)
+
+// remove
+const lastlang = document.querySelector('li:last-child')
+lastlang.remove();
+
+</script>
+</html>
